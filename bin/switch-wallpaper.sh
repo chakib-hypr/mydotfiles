@@ -19,11 +19,11 @@ fi
 RANDOM_WALLPAPER="${WALLPAPERS[RANDOM % ${#WALLPAPERS[@]}]}"
 
 # Set it using swww
-if command -v swww >/dev/null 2>&1; then
+if command -v awww >/dev/null 2>&1; then
     swww img "$RANDOM_WALLPAPER" --transition-type fade --transition-fps 60
 elif command -v feh >/dev/null 2>&1; then
     feh --bg-scale "$RANDOM_WALLPAPER"
 else
-    echo "No supported wallpaper tool found (swww or feh)"
+    echo "No supported wallpaper tool found (awww or feh)"
     exit 1
 fi
